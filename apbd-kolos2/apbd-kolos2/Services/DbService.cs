@@ -82,7 +82,7 @@ public class DbService : IDbService
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateWeight(int characterId, int weight)
+    public async Task UpdateCharacterCurrentWeight(int characterId, int weight)
     {
         var character = await _context.characters
             .FirstAsync(e => e.Id == characterId);

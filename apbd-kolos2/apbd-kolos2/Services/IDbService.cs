@@ -12,5 +12,5 @@ public interface IDbService
     Task<ICollection<Backpacks>> GetBackpack(int characterId);
     Task AddItems(int[] itemIds, int characterId);
     Task UpdateBackpack(int characterId, int itemId);
-    Task UpdateWeight(int characterId, int weight);
+    Task UpdateCharacterCurrentWeight(int characterId, int weight);
 }

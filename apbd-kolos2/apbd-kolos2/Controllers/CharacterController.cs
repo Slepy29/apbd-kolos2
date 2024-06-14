@@ -64,7 +64,7 @@ public class CharacterController : ControllerBase
                 $"Items are to heavy, items weight - {itemsWeightSum}, avaliableSpace - {avaliableSpace}");
 
         await _dbService.AddItems(itemIds, characterID);
-        await _dbService.UpdateWeight(characterID, itemsWeightSum);
+        await _dbService.UpdateCharacterCurrentWeight(characterID, itemsWeightSum);
 
         var bList = await _dbService.GetBackpack(characterID);
         
